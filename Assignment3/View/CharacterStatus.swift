@@ -13,8 +13,19 @@ struct CharacterStatus: View {
     
     var body: some View {
         HStack {
-            Image(systemName: status == "Alive" ? "person.fill.checkmark" : "person.fill.xmark")
+            Image(systemName: iconName(for: status))
             Text("Status: \(status)")
+        }
+    }
+    
+    private func iconName(for status: String) -> String {
+        switch status {
+        case "Alive":
+            return "person.fill.checkmark"
+        case "unknown":
+            return "person.fill.questionmark"
+        default:
+            return "person.fill.xmark"
         }
     }
 }

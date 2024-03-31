@@ -8,33 +8,33 @@
 import SwiftUI
 
 struct Characters: View {
+    
+    @ObservedObject var charactervm = CharacterViewModel()
+    
     var body: some View {
         NavigationStack {
             List {
-                NavigationLink {
-                    CharacterDetail()
-                } label: {
-                    Text("Character 1")
+                ForEach(charactervm.characterResults) { character in
+                    NavigationLink {
+                        CharacterDetail(character: character)
+                    } label: {
+                        Text(character.name)
+                    }
                 }
-                NavigationLink {
-                    CharacterDetail()
-                } label: {
-                    Text("Character 2")
-                }
-                NavigationLink {
-                    CharacterDetail()
-                } label: {
-                    Text("Character 3")
-                }
-                NavigationLink {
-                    CharacterDetail()
-                } label: {
-                    Text("Character 4")
-                }
+            }
+            .task {
+                await charactervm.fetchData()
             }
             .listStyle(.grouped)
             .navigationTitle("Rick & Morty Character List")
             .navigationBarTitleDisplayMode(.inline)
+            .alert(isPresented: $charactervm.hasError, error: charactervm.error, actions: {
+                Button("Retry") {
+                    Task {
+                        await charactervm.fetchData()
+                    }
+                }
+            })
         }
     }
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CharacterResults {
+struct CharacterResults : Codable {
     let info: InfoData
     let results: [Character]
 }
@@ -19,7 +19,7 @@ struct InfoData : Codable {
     let prev: String?
 }
 
-struct Character : Codable {
+struct Character : Codable, Identifiable {
     let id: Int
     let name: String
     let status: String
