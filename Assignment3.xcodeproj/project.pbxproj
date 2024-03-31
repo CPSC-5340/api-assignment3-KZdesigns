@@ -7,16 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03C890BF2BB8BFA1006FCFB9 /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C890BE2BB8BFA1006FCFB9 /* CharacterModel.swift */; };
+		03C890C12BB8C356006FCFB9 /* CharacterDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C890C02BB8C356006FCFB9 /* CharacterDetail.swift */; };
+		03C890C32BB8E0B5006FCFB9 /* CharacterStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C890C22BB8E0B5006FCFB9 /* CharacterStatus.swift */; };
+		03C890C52BB8E129006FCFB9 /* CharacterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C890C42BB8E129006FCFB9 /* CharacterImageView.swift */; };
+		03C890C72BB8F732006FCFB9 /* CharacterViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03C890C62BB8F732006FCFB9 /* CharacterViewModel.swift */; };
 		ACF5E04029BE957F00DD981A /* Assignment3App.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5E03F29BE957F00DD981A /* Assignment3App.swift */; };
-		ACF5E04229BE957F00DD981A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5E04129BE957F00DD981A /* ContentView.swift */; };
+		ACF5E04229BE957F00DD981A /* Characters.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF5E04129BE957F00DD981A /* Characters.swift */; };
 		ACF5E04429BE958000DD981A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF5E04329BE958000DD981A /* Assets.xcassets */; };
 		ACF5E04729BE958000DD981A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACF5E04629BE958000DD981A /* Preview Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		03C890BE2BB8BFA1006FCFB9 /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		03C890C02BB8C356006FCFB9 /* CharacterDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetail.swift; sourceTree = "<group>"; };
+		03C890C22BB8E0B5006FCFB9 /* CharacterStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterStatus.swift; sourceTree = "<group>"; };
+		03C890C42BB8E129006FCFB9 /* CharacterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterImageView.swift; sourceTree = "<group>"; };
+		03C890C62BB8F732006FCFB9 /* CharacterViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterViewModel.swift; sourceTree = "<group>"; };
 		ACF5E03C29BE957F00DD981A /* Assignment3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Assignment3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACF5E03F29BE957F00DD981A /* Assignment3App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignment3App.swift; sourceTree = "<group>"; };
-		ACF5E04129BE957F00DD981A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		ACF5E04129BE957F00DD981A /* Characters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Characters.swift; sourceTree = "<group>"; };
 		ACF5E04329BE958000DD981A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ACF5E04629BE958000DD981A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,6 +42,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		03C890BB2BB8BB3F006FCFB9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ACF5E04129BE957F00DD981A /* Characters.swift */,
+				03C890C02BB8C356006FCFB9 /* CharacterDetail.swift */,
+				03C890C22BB8E0B5006FCFB9 /* CharacterStatus.swift */,
+				03C890C42BB8E129006FCFB9 /* CharacterImageView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		03C890BC2BB8BB44006FCFB9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				03C890BE2BB8BFA1006FCFB9 /* CharacterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		03C890BD2BB8BB4A006FCFB9 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				03C890C62BB8F732006FCFB9 /* CharacterViewModel.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
 		ACF5E03329BE957F00DD981A = {
 			isa = PBXGroup;
 			children = (
@@ -51,8 +88,10 @@
 		ACF5E03E29BE957F00DD981A /* Assignment3 */ = {
 			isa = PBXGroup;
 			children = (
+				03C890BD2BB8BB4A006FCFB9 /* ViewModal */,
+				03C890BC2BB8BB44006FCFB9 /* Model */,
+				03C890BB2BB8BB3F006FCFB9 /* View */,
 				ACF5E03F29BE957F00DD981A /* Assignment3App.swift */,
-				ACF5E04129BE957F00DD981A /* ContentView.swift */,
 				ACF5E04329BE958000DD981A /* Assets.xcassets */,
 				ACF5E04529BE958000DD981A /* Preview Content */,
 			);
@@ -95,7 +134,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1420;
-				LastUpgradeCheck = 1420;
+				LastUpgradeCheck = 1520;
 				TargetAttributes = {
 					ACF5E03B29BE957F00DD981A = {
 						CreatedOnToolsVersion = 14.2;
@@ -137,7 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACF5E04229BE957F00DD981A /* ContentView.swift in Sources */,
+				03C890C52BB8E129006FCFB9 /* CharacterImageView.swift in Sources */,
+				03C890C72BB8F732006FCFB9 /* CharacterViewModel.swift in Sources */,
+				03C890C12BB8C356006FCFB9 /* CharacterDetail.swift in Sources */,
+				03C890BF2BB8BFA1006FCFB9 /* CharacterModel.swift in Sources */,
+				03C890C32BB8E0B5006FCFB9 /* CharacterStatus.swift in Sources */,
+				ACF5E04229BE957F00DD981A /* Characters.swift in Sources */,
 				ACF5E04029BE957F00DD981A /* Assignment3App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -149,6 +193,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -181,6 +226,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -209,6 +255,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -241,6 +288,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
